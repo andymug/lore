@@ -1,0 +1,56 @@
+@font-face {
+  font-family: 'MyWebFont';
+  src: url('SkyrimBooks_Handwritten_Bold-Regular.ttf')  format('truetype'); 
+}
+
+.marquee {
+	font-family: 'MyWebFont';
+  padding-left: 100px;
+  margin-top: 50px;
+  height: 600px;
+  width: 1920px;
+  overflow: hidden;
+  position: absolute;
+}
+
+.marquee span {
+	font-family: 'MyWebFont';
+	display: inline-block;
+  font-size: 2em;
+  position: absolute;
+  color: black;
+  width: 80%;
+  height: 100%;
+  margin: 0;
+  line-height: 50px;
+  text-align: center;
+  transform: translateY(100%);
+  animation: cssmarquee 100s linear infinite;
+}
+
+/*
+.marquee2 span {
+  animation-delay: 5s;
+}
+*/
+
+@keyframes cssmarquee {
+  0% {
+    transform: translateY(100%);
+  }
+  100% {
+    transform: translateY(-100%);
+  }
+}
+
+html, body {
+	width: 100%;
+	height: 100%;
+	font-family: MyWebFont;
+  	background-image: url('bg.png');
+  	background-repeat : no-repeat;
+}
+
+audio { 
+   display: inline;
+}
